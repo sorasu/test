@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>DFP demo</title>
+        <title>DFP test</title>
 <!-- DFP -->
 <script type='text/javascript'>
 (function() {
