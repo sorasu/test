@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>synchronous</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- DFP -->
+        <script type='text/javascript'>
+        (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.defineSlot('/25588978/gq_category_c1', [728, 90], 'gq_category_c1').addService(googletag.pubads());
+        googletag.defineSlot('/25588978/gq_home_girl_r1_300x250', [300, 250], 'gq_home_girl_r1_300x250').addService(googletag.pubads());
+        googletag.pubads().enableSyncRendering();
+        googletag.pubads().enableSingleRequest();
+        
+        googletag.pubads().collapseEmptyDivs(true);
+        // hide DFP slot were no ad's rendered
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+              console.log(event.slot.getAdUnitPath().split("/")[2] + ' is empty:' + event.isEmpty);
+                  if (event.isEmpty)
+                        $("."+event.slot.getAdUnitPath().split("/")[2]).hide();
+        });
+    
+        googletag.enableServices();
+        </script>
+        <!-- END DFP -->
+        <!-- for flash to open/close -->
+        <script src="script/ad.js"></script>
+        <script type='text/javascript'>
+            window.onload=function(){
+                SlideOpen();
+                // close expanded flash after certain seconds
+                setTimeout(function() { SlideClose(); }, 8000);
+                }
+        </script>
+    </head>
+    <!-- expand flash banner on page load -->
+    <body>
+        <h3 >gq_category_c1</h3>
+        <!-- DFP gq_category_c1 -->        
+        <div id='gq_category_c1'>
+        <script type='text/javascript'>
+        googletag.display('gq_category_c1'); 
+        </script>
+        </div>
+            
+        <h3>gq_home_girl_r1_300x250</h3>
+        <!-- DFP gq_home_girl_r1_300x250 -->
+        <div id='gq_home_girl_r1_300x250' style='width:300px; height:250px; float:right;'>
+            
+        <script type='text/javascript'>
+        googletag.display('gq_home_girl_r1_300x250');        
+        </script>
+        </div>
+    </body>
+</html>

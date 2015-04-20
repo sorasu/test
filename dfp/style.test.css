@@ -1,0 +1,18 @@
+#mainContainer {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+
+#content, #adContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+}
+
+#contentElement {
+  width: 300px;
+  height: 250px;
+}
